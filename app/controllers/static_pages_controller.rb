@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :admin_user, only: [:admin]
+  #before_action :admin_user, only: [:admin]
 
   def home
     @blurbs = Blurb.all
