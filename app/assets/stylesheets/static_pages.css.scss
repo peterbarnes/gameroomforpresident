@@ -1,0 +1,41 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.info {
+  padding: 5px;
+  h5 {
+    border-bottom: 1px solid #cccccc;
+  }
+}
+
+h1.head, h2.head, h3.head, h4.head, h5.head, .head {
+  text-align: center;
+}
+
+.about {
+  .panel-body {
+    max-height: 185px;
+    min-height: 185px;
+    overflow: scroll;
+  }
+}
+
+.navlinks {
+  position: fixed;
+}
+
+li.user {
+  margin: 15px;
+  padding: 15px;
+  &:nth-child(odd) {
+    background-color: #eaeaea;
+  }
+}
+
+div.page {
+  min-height: 62px;
+}
+
+.red {
+  color: #F54747;
+}

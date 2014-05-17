@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <style>
+    i {
+      color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <h4><%= @params[:name] %> <i><%= "<#{@params[:email]}>" %></i> submitted a comment,</h4>
+  <p><%= @params[:body] %></p>
+</body>
+</html>

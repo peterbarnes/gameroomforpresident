@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><i class="fa fa-users"></i> Follow us</h3>
+      </div>
+      <div class="panel-body">
+        <% @links.each do |l| %>
+          <a href="<%= l.url %>" 
+             target="blank" 
+             class="btn btn-primary btn-block">
+             <i class="fa fa-<%= l.icon %>"></i>
+             <%= l.name %>
+           </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3><i class="fa fa-comments"></i> Questions, comments, or concerns?</h3>
+      </div>
+      <div class="panel-body">
+        <div class="emailform">
+          <%= form_tag("/send", method: "post") do %>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <%= label_tag(:name, "Name") %>
+                <%= text_field_tag(:name, params[:name], class: "form-control") %>
+                <hr noshade>
+                <%= label_tag(:email, "Email") %>
+                <%= text_field_tag(:email, params[:email], class: "form-control") %>
+              </div>
+              <div class="col-md-6 form-group">
+                <%= label_tag(:body, "Message") %>
+                <%= text_area_tag(:body, params[:body], class: "form-control", rows: "6") %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1">
+                <button type="submit" 
+                        class="btn btn-primary">
+                     <i class="fa fa-envelope-o"></i> 
+                    Send
+                </button>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

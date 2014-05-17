@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 well">
+    <div class="signform">
+      <h2>
+        <i class="fa fa-building-o"></i> Create new service
+      </h2>
+    </div>
+    <%= form_for(@service) do |f| %>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :desc, "Description" %>
+        <%= f.text_area :desc, class: "form-control", rows: "6" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :icon %>
+        <%= f.text_field :icon, class: "form-control" %>
+      </div>
+
+      <button type="submit" 
+              class="btn btn-primary">
+           <i class="fa fa-save"></i> 
+            Create service
+      </button>
+    <% end %>
+  </div>
+</div>

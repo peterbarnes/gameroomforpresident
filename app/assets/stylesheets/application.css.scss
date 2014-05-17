@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ul {
+  list-style: none;
+}
+
+/* iphone screen */
+@media all and (max-width: 992px) {
+  .navlinks {
+    display: none;
+  }
+  .about {
+    .panel-body {
+      max-height: 100% !important;
+      min-height: 100% !important;
+    }
+  }
+}
+
+@media all and (max-width: 750px) {
+  iframe, hr {
+    display: none !important;
+  }
+}
+
+/* variables */
+
+$grpurple: #9600A3;
+$grhover: #7A0085;
+$grlink: #CB38D9;
+$grdisabled: #DB9DE0;
+
+/* universal */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar-brand {
+  color: #EDEDED !important;
+  &:hover {
+    color: #FFFFFF !important;
+  }
+}
+
+a {
+  color: $grlink;
+  &:hover {
+    color: $grpurple;
+    text-decoration: none;
+  }
+}
+div.pagination {
+  margin: 0px;
+  margin-top: -17px;
+  .active a{
+    background-color: $grpurple !important;
+    border-color: $grpurple !important;
+    &:hover {
+      color: $grpurple !important;
+    }
+  }
+  a {
+    color: $grlink;
+  }
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999999;
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+  nav li {
+    font-size: 75%;
+  }
+}
+
+.btn-primary {
+  background-color: $grpurple;
+  border-color: $grpurple;
+  &:hover {
+    background-color: $grhover;
+    border-color: $grhover;
+  }
+}
+
+.btn-primary[disabled] {
+  background-color: $grdisabled !important;
+  border-color: $grdisabled !important;
+}
+
+.signform h2{
+  text-align: center;
+}
+
+

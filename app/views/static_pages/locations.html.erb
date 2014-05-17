@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-2 panel panel-default navlinks">
+    <% @stores.each do |l| %>
+      <h5><a href="#<%= l.title %>"><%= l.title %></a></h5>
+    <% end %>
+    <hr noshade>
+    <h5><a href="#">Back to top</a></h5>
+  </div>
+</div>
+<div class="row">
+  <%= render @stores %>
+</div>
+

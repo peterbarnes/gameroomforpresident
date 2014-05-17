@@ -1,0 +1,27 @@
+<% provide(:title, "All users") %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2 class="head"><i class="fa fa-users"></i> All users</h2>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+            <%= will_paginate %>
+          </div>
+          <div class="col-md-6">
+            <%= form_tag(users_path, :method => "get", id: "search-form", class: "pull-right") do %>
+              <div class="form-group">
+                <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <ul class="users">
+          <%= render @users %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
